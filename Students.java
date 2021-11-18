@@ -29,11 +29,16 @@ public class Students {
         while (studentsMarks.containsValue(-1)){
             for (Map.Entry<String, Integer> ent : set) {
                 if(ent.getValue()==-1){
-                    int mark = -1;
+                    Integer mark = -1;
                     while(!(0<mark && mark<=5)){
-                        System.out.printf("Введите оценку для студента %s: ", ent.getKey());
-                        mark = scanner.nextInt();
-                        studentsMarks.put(ent.getKey(), mark);
+                        try{
+                            System.out.printf("Введите оценку для студента %s: ", ent.getKey());
+                            mark = scanner.nextInt();
+                            studentsMarks.put(ent.getKey(), mark);
+                        } catch (Exception e){
+                            System.out.println("Неверный ввод!");
+                            scanner.nextLine();
+                        }
                     }
                 }
             }
