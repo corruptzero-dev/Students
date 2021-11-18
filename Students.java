@@ -20,6 +20,7 @@ public class Students {
 
 
     public void fill(){
+        Collections.shuffle(Collections.singletonList(names));
         Arrays.stream(names).forEach((Objects.requireNonNull(elem -> studentsMarks.put(elem, -1))));
 
     }
