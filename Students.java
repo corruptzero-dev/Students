@@ -48,7 +48,7 @@ public class Students {
                     putMark();
                 }
             }
-            System.out.println("___Результаты___");
-            studentsMarks.forEach((key, value) -> System.out.println(value == 0 ? key + ": нет оценки" : key + ": " + value));
-        }
+        System.out.println("___Результаты___");
+        studentsMarks.forEach((key, value) -> System.out.println(value == 0 ? key + ": нет оценки" : key + ": " + value));
     }
+}
