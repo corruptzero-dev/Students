@@ -50,5 +50,6 @@ public class Students {
             }
         System.out.println("___Результаты___");
         studentsMarks.forEach((key, value) -> System.out.println(value == 0 ? key + ": нет оценки" : key + ": " + value));
+        Thread.currentThread().interrupt();
     }
 }
